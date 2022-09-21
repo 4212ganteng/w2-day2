@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/public/assets/css/style.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -38,7 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="assets/image/logo2.png" alt="" width="50vh" />
+          <img src="/public/assets/image/logo2.png" alt="" width="50vh" />
         </a>
         <button
           class="navbar-toggler"
@@ -57,16 +57,16 @@
               <a
                 class="nav-link active fw-bold"
                 aria-current="page"
-                href="/index.html"
+                href="/"
                 >Home</a
               >
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="#">Add Project</a>
+              <a class="nav-link" href="/add-project">Add Project</a>
             </li>
           </ul>
           <form class="d-flex">
-            <a class="btn-nav" href="">Contact Me</a>
+            <a class="btn-nav" href="/contact">Contact Me</a>
           </form>
         </div>
       </div>
@@ -74,10 +74,10 @@
     <!-- section 1 -->
     <div class="container mt-5" style="width:500px ;">
       <h2 class="text-center mb-5">Get In Touch</h2>
-      <form action="" method="post">
+      <form action="store-contact" method="post">
         <div class="mb-3">
           <label for="input-text" class="form-label">Name</label>
-          <input type="text" class="form-control border-0 shadow p-2 w-100 rounded" id="input-text" name="text">
+          <input type="text" class="form-control border-0 shadow p-2 w-100 rounded" id="input-text" name="name">
         </div>
         <div class="mb-3">
           <label for="input-email" class="form-label">Email</label>
@@ -89,7 +89,7 @@
         </div>
         
        <div class="mb-3">
-        <label for="input-select" class="form-label">Phone Number</label>
+        <label for="input-select" class="form-label">Subject</label>
         <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="input-select" name="select">
             <option selected> -- sellect --- </option>
             <option value="Front End">Front End</option>
@@ -100,8 +100,7 @@
 
         <div class="mb-3 mt-4">
           <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control border-0 shadow p-2 w-100 rounded" id="message" name="message
-          message" rows="3"></textarea>
+          <textarea class="form-control border-0 shadow p-2 w-100 rounded" id="message" name="message" rows="3"></textarea>
         </div>
 
         <button class="btn btn-dark float-end mb-5  mt-3">submit</button>

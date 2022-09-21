@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/public/assets/css/style.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -38,7 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="assets/image/logo2.png" alt="" width="50vh" />
+          <img src="/public/assets/image/logo2.png" alt="" width="50vh" />
         </a>
         <button
           class="navbar-toggler"
@@ -57,16 +57,16 @@
               <a
                 class="nav-link active fw-bold"
                 aria-current="page"
-                href="/index.html"
+                href="/"
                 >Home</a
               >
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="#">Add Project</a>
+              <a class="nav-link" href="/add-project">Add Project</a>
             </li>
           </ul>
           <form class="d-flex">
-            <a class="btn-nav" href="">Contact Me</a>
+            <a class="btn-nav" href="/contact">Contact Me</a>
           </form>
         </div>
       </div>
@@ -74,44 +74,44 @@
     <!-- section 1 -->
     <div class="container mt-5" style="width:500px ;">
       <h2 class="text-center mb-5">ADD MY PROJECT</h2>
-      <form action="" method="post">
+      <form action="/store-project" method="post">
         <div class="mb-3">
           <label for="input-title" class="form-label">Project Name</label>
-          <input type="email" class="form-control border-0 shadow p-2 w-100 rounded" id="input-title" name="title">
+          <input type="text" class="form-control border-0 shadow p-2 w-100 rounded" id="input-title" name="title">
         </div>
         <div class="d-flex mt-4">
           <div class="left me-2 ">
             <label for="start-date" class="mb-2" >Start Date</label>
-            <input type="date" id="start-date" class="border-0 shadow p-2 w-100 rounded" />
+            <input type="date" id="start-date" name="start-date" class="border-0 shadow p-2 w-100 rounded" />
           </div>
           <div class="right">
             <label for="end-date" class="mb-2">End Date</label>
-            <input type="date" id="end-date" class="border-0 shadow p-2 w-100 rounded"/>
+            <input type="date" id="end-date" name="end-date" class="border-0 shadow p-2 w-100 rounded"/>
           </div>
         </div>
 
         <div class="mb-3 mt-4">
           <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-          <textarea class="form-control border-0 shadow p-2 w-100 rounded" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control border-0 shadow p-2 w-100 rounded" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
         </div>
         <table class="mt-4" >
           <tr >
             <td>
-                <input class="form-check-input " type="checkbox" value="" id="node">
+                <input class="form-check-input " type="checkbox" value="node" id="node" name="node">
                 <label class="form-check-label ms-3" for="node"> Node Js </label>
             </td>
             <td>
-              <input class="form-check-input ms-5" type="checkbox" value="" id="nextjs">
-              <label class="form-check-label ms-3" for="nextjs"> Next js </label>
+              <input class="form-check-input ms-5" type="checkbox" value="laravel" id="laravel" name="laravel">
+              <label class="form-check-label ms-3" for="laravel"> Laravel </label>
           </td>
           </tr>
           <tr >
             <td>
-                <input class="form-check-input" type="checkbox" value="" id="react">
+                <input class="form-check-input" type="checkbox" value="react" id="react" name="react">
                 <label class="form-check-label ms-3" for="react"> React Js </label>
             </td>
             <td>
-              <input class="form-check-input ms-5" type="checkbox" value="" id="golang">
+              <input class="form-check-input ms-5" type="checkbox" value="golang" id="golang" name="golang">
               <label class="form-check-label ms-3" for="golang"> Go-lang </label>
           </td>
           </tr>
@@ -124,7 +124,7 @@
               <p class="m-0 p-2 fs-5" style="background-color:#e4e4e4 ;">Choose</p>
               <i class="fa-solid fa-paperclip fs-4 me-3"></i>
             </label>
-            <input type="file" id="upload" hidden />
+            <input type="file" id="upload" name="gambar" hidden />
           </div>
         </div>
         <button class="btn btn-dark float-end mb-5  mt-3">submit</button>
