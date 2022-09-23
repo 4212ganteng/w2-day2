@@ -122,90 +122,38 @@
     <div class="section2">
       <h2 class="text-center my-5 fs-1">MY PROJECT</h2>
       <div class="card-group container">
-        <div class="card p-3 shadow me-3">
-          <img
-            src="/public/assets/image/2.jpg"
-            class="card-img-top rounded-3"
-            alt="..."
-            width="100%"
-          />
-          <div class="card-body">
-            <h3 class="card-title">Dumbways Mobile App - 2021</h3>
-            <span class="text-muted">Durasi : 30 menit</span>
-            <p class="card-text mt-3">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <div class="icon fs-2 text-center">
-              <i class="fa-brands fa-node"></i>
-              <i class="fa-brands fa-react mx-2"></i>
-              <i class="fa-brands fa-golang"></i>
-              <i class="fa-brands fa-vuejs mx-2"></i>
-              <i class="fa-brands fa-laravel"></i>
+        {{range  $index, $data := .penampungdata}}
+        <div class="col-sm-4">
+          <div class="card p-3 shadow me-3">
+            <img
+              src="/public/assets/image/2.jpg"
+              class="card-img-top rounded-3"
+              alt="..."
+              width="100%"
+            />
+            <div class="card-body">
+              <a href="/detail/{{$index}}">
+              <h3 class="card-title">{{$data.Title}}</h3>
+            </a>
+              <span class="text-muted">Durasi : 30 menit</span>
+              <p class="card-text mt-3">
+                {{$data.Deskripsi}}
+              </p>
+              <div class="icon fs-2 text-center">
+                <i class="fa-brands fa-node"></i>
+                <i class="fa-brands fa-react mx-2"></i>
+                <i class="fa-brands fa-golang"></i>
+                <i class="fa-brands fa-vuejs mx-2"></i>
+                <i class="fa-brands fa-laravel"></i>
+              </div>
+            </div>
+            <div class="d-flex justify-content-evenly">
+              <a href="" class="bg-edit px-5 py-1 rounded-3 my-2 me-2">edit</a>
+              <a href="" class="bg-edit px-5 py-1 rounded-3 my-2">delete</a>
             </div>
           </div>
-          <div class="d-flex justify-content-evenly">
-            <a href="" class="bg-edit px-5 py-1 rounded-3 my-2 me-2">edit</a>
-            <a href="" class="bg-edit px-5 py-1 rounded-3 my-2">delete</a>
-          </div>
-        </div>
-        <div class="card p-3 shadow me-3">
-          <img
-            src="/public/assets/image/1.jpg"
-            class="card-img-top rounded-3"
-            alt="..."
-            width="100%"
-          />
-          <div class="card-body">
-            <h3 class="card-title">Dumbways Mobile App - 2021</h3>
-            <span class="text-muted">Durasi : 30 menit</span>
-            <p class="card-text mt-3">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <div class="icon fs-2 text-center">
-              <i class="fa-brands fa-node"></i>
-              <i class="fa-brands fa-react mx-2"></i>
-              <i class="fa-brands fa-golang"></i>
-              <i class="fa-brands fa-vuejs mx-2"></i>
-              <i class="fa-brands fa-laravel"></i>
-            </div>
-          </div>
-          <div class="d-flex justify-content-evenly">
-            <a href="" class="bg-edit px-5 py-1 rounded-3 my-2 me-2">edit</a>
-            <a href="" class="bg-edit px-5 py-1 rounded-3 my-2">delete</a>
-          </div>
-        </div>
-        <div class="card p-3 shadow me-3">
-          <img
-            src="/public/assets/image/4.jpg"
-            class="card-img-top rounded-3"
-            alt="..."
-            width="100%"
-          />
-          <div class="card-body">
-            <h3 class="card-title">Dumbways Mobile App - 2021</h3>
-            <span class="text-muted">Durasi : 30 menit</span>
-            <p class="card-text mt-3">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <div class="icon fs-2 text-center">
-              <i class="fa-brands fa-node"></i>
-              <i class="fa-brands fa-react mx-2"></i>
-              <i class="fa-brands fa-golang"></i>
-              <i class="fa-brands fa-vuejs mx-2"></i>
-              <i class="fa-brands fa-laravel"></i>
-            </div>
-          </div>
-          <div class="d-flex justify-content-evenly">
-            <a href="" class="bg-edit px-5 py-1 rounded-3 my-2 mr-2">edit</a>
-            <a href="" class="bg-edit px-5 py-1 rounded-3 my-2">delete</a>
-          </div>
-        </div>
+      </div>
+      {{end}}
       </div>
     </div>
 
